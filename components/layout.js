@@ -13,10 +13,10 @@ export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/KGLogo.png" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="Kaleb Getachew's personal website"
         />
         <meta
           property="og:image"
@@ -39,7 +39,7 @@ export default function Layout({ children, home }) {
           <>
             <Image
               priority
-              src="/images/profile.jpg"
+              src="/images/profile.png"
               className={utilStyles.borderCircle}
               height={144}
               width={144}

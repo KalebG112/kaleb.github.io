@@ -12,24 +12,19 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>[Hello! This is my web page using github pages.]</p>
+        <p>Hello! I am Kaleb, a Computer/Data Scientist!</p>
         <p>
-          (This is a sample website - you’ll be building a site like this in{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+          I am currently seeking Full-time employment as a Software Engineer and Data Analyst.
+          Here is a link to my {' '}
+          <a href="https://github.com/kgetachew/kgetachew/blob/main/Getachew%2C%20Kaleb.pdf">résumé</a>.
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>{title}</Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
-          ))}
+        <h2 className={utilStyles.headingLg}>Socials</h2>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/kaleb-getachew/">LinkedIn</a></li>
+          <br />
+          <li><a href="https://github.com/kgetachew">Github</a></li>
         </ul>
       </section>
     </Layout>
