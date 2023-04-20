@@ -19,6 +19,7 @@ export default function Home({ allPostsData }) {
           <a href="https://github.com/kgetachew/kgetachew/blob/main/Getachew%2C%20Kaleb.pdf">résumé</a>.
         </p>
       </section>
+      
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Socials</h2>
         <ul>
@@ -27,6 +28,21 @@ export default function Home({ allPostsData }) {
           <li><a href="https://github.com/kgetachew">Github</a></li>
         </ul>
       </section>
+
+      <section>
+        <h2 className={utilStyles.headingLg}>Projects</h2>
+        <ul className={utilStyles.list}>
+          {allPostsData.map(({ id, date, title }) => (
+            <li className={utilStyles.listItem} key={id}>
+              <Link href={`/posts/${id}`}>{title}</Link>
+              <br />
+              <small className={utilStyles.lightText}>
+                <Date dateString={date} />
+              </small>
+            </li>
+          ))}
+          </ul>
+        </section>
     </Layout>
   )
 }
