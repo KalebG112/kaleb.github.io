@@ -1,3 +1,9 @@
+---
+title: 'veChess'
+date: '2023-09-30'
+---
+
+
 <h2> veChess: Your Ultimate Chess Companion </h2>
 
 <h4> <em>Unleash the Power of AI to Master Chess</em> </h4>
