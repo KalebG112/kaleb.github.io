@@ -3,7 +3,8 @@ title: 'Restaurant Recommender'
 date: '2020-11-30'
 ---
 
-<a name="br1"></a>ML4VA PROJECT
+<h2>ML4VA PROJECT: Restaurant Recommender</h2>
+<a name="br1"></a>
 
 ||<p>` `Andrew Lin</p><p>Department of Computer Science</p><p>` `University of Virginia</p><p>Charlottesville, VA</p><p>acl2mf@virginia.edu</p>||<p>` `Ali Ibrahim</p><p>Department of Computer Science</p><p>` `University of Virginia</p><p>Charlottesville, VA</p><p>ai9sk@virginia.edu</p>||<p>` `Kaleb Getachew</p><p>Department of Computer Science</p><p>` `University of Virginia</p><p>Charlottesville, VA</p><p>kg9rv@virginia.edu</p>|
 | :- | :- | :- | :- | :- | :- |
@@ -34,8 +35,7 @@ Virginia (NoVA), Roanoke, Charlottesville, Richmond, Virginia Beach, and Blacksb
 Previous research has been done to explore the effects of relevant contextual features on restaurant recommender systems. It highlighted a recommender system called Surfeos, which used collaborative ﬁltering to give recommendations.
 
 In addition, there have been similar efforts within the restaurant industry that have utilized Machine Learning algorithms.
-One such example was a [Stanford](http://cs229.stanford.edu/proj2013/SawantPai-YelpFoodRecommendationSystem.pdf)[ ](http://cs229.stanford.edu/proj2013/SawantPai-YelpFoodRecommendationSystem.pdf)[Paper](http://cs229.stanford.edu/proj2013/SawantPai-YelpFoodRecommendationSystem.pdf)[ ](http://cs229.stanford.edu/proj2013/SawantPai-YelpFoodRecommendationSystem.pdf)which predicted restaurant rating and conducted an analysis of the types of
-predictive models and ho[w](http://cs229.stanford.edu/proj2013/SawantPai-YelpFoodRecommendationSystem.pdf)[ ](http://cs229.stanford.edu/proj2013/SawantPai-YelpFoodRecommendationSystem.pdf)[well](http://cs229.stanford.edu/proj2013/SawantPai-YelpFoodRecommendationSystem.pdf)[ ](http://cs229.stanford.edu/proj2013/SawantPai-YelpFoodRecommendationSystem.pdf)[they](http://cs229.stanford.edu/proj2013/SawantPai-YelpFoodRecommendationSystem.pdf)[ ](http://cs229.stanford.edu/proj2013/SawantPai-YelpFoodRecommendationSystem.pdf)[are](http://cs229.stanford.edu/proj2013/SawantPai-YelpFoodRecommendationSystem.pdf)[ ](http://cs229.stanford.edu/proj2013/SawantPai-YelpFoodRecommendationSystem.pdf)able to predict the rating of a speciﬁc restaurant.
+One such example was a [Stanford paper](http://cs229.stanford.edu/proj2013/SawantPai-YelpFoodRecommendationSystem.pdf) which predicted restaurant rating and conducted an analysis of the types of predictive models and how well they are able to predict the rating of a speciﬁc restaurant.
 
 ` `The idea being explored is if it is possible to accurately predict what cuisine a person would want eat depending on their
  personal attributes and restaurant atmosphere preferences. Therefore the question we will attempt to answer is: "To
@@ -45,7 +45,7 @@ what extent can we predict people’s cuisine preferences based on their attribu
 
 3\.1 Original Dataset Description
 
-Our User-Restaurant dataset can be found here: [Restaurant](https://www.kaggle.com/uciml/restaurant-data-with-consumer-ratings?select=rating_final.csv)[ ](https://www.kaggle.com/uciml/restaurant-data-with-consumer-ratings?select=rating_final.csv)[Data](https://www.kaggle.com/uciml/restaurant-data-with-consumer-ratings?select=rating_final.csv)[ ](https://www.kaggle.com/uciml/restaurant-data-with-consumer-ratings?select=rating_final.csv)[with](https://www.kaggle.com/uciml/restaurant-data-with-consumer-ratings?select=rating_final.csv)[ ](https://www.kaggle.com/uciml/restaurant-data-with-consumer-ratings?select=rating_final.csv)[Consumer](https://www.kaggle.com/uciml/restaurant-data-with-consumer-ratings?select=rating_final.csv)[ ](https://www.kaggle.com/uciml/restaurant-data-with-consumer-ratings?select=rating_final.csv)[Ratings](https://www.kaggle.com/uciml/restaurant-data-with-consumer-ratings?select=rating_final.csv)[ ](https://www.kaggle.com/uciml/restaurant-data-with-consumer-ratings?select=rating_final.csv)[(hyperlink)](https://www.kaggle.com/uciml/restaurant-data-with-consumer-ratings?select=rating_final.csv)
+Our User-Restaurant dataset can be found here: [Restaurant Data with Consumer Ratings](https://www.kaggle.com/uciml/restaurant-data-with-consumer-ratings?select=rating_final.csv)
 
 The dataset contains a total of nine csv ﬁles. Two of which, we believe that we will discard because they do not seem
  to be relevant for our purposes. The remaining seven csv ﬁles are what we will use. Four of the csv ﬁles pertain to
@@ -119,8 +119,6 @@ population. We decided "age" was the best feature to stratify because we believe
 between different age groups. For example, older people’s preferences may not vary much within the same age group,
 however, they could differ vastly when compared to a younger person’s cuisine preferences.
 
-2
-
 
 
 
@@ -171,9 +169,10 @@ The baseline model we used was a single Random Forest classiﬁer. We used GridS
 We then trained the Random Forest model on the new labels, tested it and calculated the confusion matrix, precision,
  recall, and accuracy scores. These were our results from the test set:
 
-Confusion Matrix ꢀ5 13ꢁ
+Confusion Matrix:
 
-2 1
+    |5 13|
+    |2  1|
 
 Precision: 0.93 Recall: 0.72 Accuracy: 0.71
 
@@ -184,13 +183,12 @@ We knew we could do better, so we decided on making an ensemble model. So far, w
 ` `In the ﬁnal voting classiﬁer we made, we used all of these models and hard voting to predict the labels on the test set.
 These were our results from the test set:
 
-Confusion Matrix ꢀ0 18ꢁ
+Confusion Matrix 
 
-1 2
+    |0 18|
+    |1  2|
 
 Precision: 0.9 Recall: 1.0 Accuracy: 0.9
-
-3
 
 
 
@@ -217,8 +215,8 @@ We decided to not have as many models as we did in the VotingClassiﬁer because
 
 5 Results
 
-We deployed the models to [ml4va.herokuapp.com/predictor](https://ml4va.herokuapp.com/predictor/)[ ](https://ml4va.herokuapp.com/predictor/)for everyone to use. The website carried out all of our
- functional needs and asked [users](https://ml4va.herokuapp.com/predictor/)[ ](https://ml4va.herokuapp.com/predictor/)[for](https://ml4va.herokuapp.com/predictor/)[ ](https://ml4va.herokuapp.com/predictor/)[the](https://ml4va.herokuapp.com/predictor/)[ ](https://ml4va.herokuapp.com/predictor/)[necessary](https://ml4va.herokuapp.com/predictor/)[ ](https://ml4va.herokuapp.com/predictor/)[information](https://ml4va.herokuapp.com/predictor/)[ ](https://ml4va.herokuapp.com/predictor/)needed for the models to predict cuisines. After
+We deployed the models to [ml4va.herokuapp.com/predictor](https://ml4va.herokuapp.com/predictor/) for everyone to use. The website carried out all of our
+ functional needs and asked users for the necessary information needed for the models to predict cuisines. After
  submitting their information, the pickled models will process the inputs and output a list of cuisines that it thinks are
  compatible with the user’s information. In addition, it will also randomly select some restaurant websites related to the
  cuisine to recommend to the user.
@@ -231,10 +229,9 @@ Mexican/Southwestern/Latin American cuisine, which was heavily weighted towards 
 cuisine model had the opposite problem of the Mexican/Southwestern/Latin American cuisine model as it was heavily
 overweight on the zero labels.
 
-We allowed a few people to try the website to see if it was somewhat accurate. The testers said yes it was accurate.
- Obviously, this isn’t a proper metric to go by, but at least it shows that the website predictor isn’t totally off.
+We allowed a few people to try the website to see if it was somewhat accurate. The testers said yes it was accurate. Obviously, this isn’t a proper metric to go by, but at least it shows that the website predictor isn’t totally off.
 
-4
+
 
 
 
@@ -295,7 +292,6 @@ Ali Ibrahim: Cleaned data, trained models, handled deployment
 
 Kaleb Getachew: Made survey, cleaned data, trained models, helped deploy
 
-5
 
 
 
@@ -327,4 +323,3 @@ https://scikit-learn.org/stable/modules/model\_evaluation.html
 
 [6] Nguyen, Rich CS 4774 https://www.cs.virginia.edu/ nn4pj/teaching University of Virginia, 2020.
 
-6
