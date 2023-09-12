@@ -19,6 +19,10 @@ export default function Home({ allPostsData }) {
           <a href="https://github.com/kgetachew/kgetachew/blob/main/Getachew%2C%20Kaleb.pdf">résumé</a>.
         </p>
       </section>
+
+      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <h2 className={utilStyles.headingLg}><a href="https://calendly.com/kg9rv">Book a meeting</a></h2>
+      </section>
       
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Socials</h2>
