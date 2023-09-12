@@ -6,7 +6,7 @@ date: '2021-12-30'
 
 <h1>NLP: Toxic Comment Classifier</h1>
 
-[PowerPoint Presentaiton](https://docs.google.com/presentation/d/1XRuFEMjr6Ev1OPPZm6DsBwPTdoXLICb1po0KzDOrJ1A/edit?usp=sharing)
+[PowerPoint Presentation](https://docs.google.com/presentation/d/1XRuFEMjr6Ev1OPPZm6DsBwPTdoXLICb1po0KzDOrJ1A/edit?usp=sharing)
 
 1. <h3> Problem </h3>
    
